@@ -1,5 +1,13 @@
 <h1>Lists#index</h1>
-
-<% @lists.each do |list| %>
-  <%= list.name %>
-<% end %>
+<div class="container">
+  <% @lists.each do |list| %>
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= list.name %></h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to "Go to list", list_path(list), class:"btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
